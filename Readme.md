@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ihor Spyrydonov](https://up.htmlacademy.ru/adaptive/14/user/671597).
-* Наставник: `Неизвестно`.
+* Наставник: Влад Слепкан.
 
 ---
 
