@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Мишка - Каталог товаров</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип магазина «Мишка»">
+      </a>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list menu-list">
+            <li class="menu-list__item">
+              <a>Каталог товаров</a>
+            </li>
+            <li class="menu-list__item">
+              <a href="form.html">Вязание на заказ</a>
+            </li>
+          </ul>
+          <form class="main-nav__search-form search-form" action="https://echo.htmlacademy.ru" method="post">
+            <input class="search-form__input" id="search-input" type="search" name="search-input" placeholder="Поиск по сайту">
+            <label class="visually-hidden" for="search-input">Поиск по сайту</label>
+          </form>
+          <a class="main-nav__cart cart" href="#">Корзина: <span class="cart__counter">пока пуста</span></a>
+        </div>
+      </nav>
+    </header>
+    <main class="page-main">
+      <h1 class="page-main__title">Каталог товаров</h1>
+      <section class="page-main__catalog catalog">
+        <ul class="catalog__list">
+          <li class="catalog__item catalog-item">
+            <h2 class="catalog-item__title">Зайчик-попрыгайчик</h2>
+            <img class="catalog-item__image" src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <p class="catalog-item__description">Рост 30 см, вес 200 г</p>
+            <b class="catalog-item__price">1 200 руб.</b>
+            <a class="catalog-item__add-to-cart" href="#">Добавить в корзину</a>
+          </li>
+          <li class="catalog__item catalog-item">
+            <h2 class="catalog-item__title">Корзинка для белья</h2>
+            <img class="catalog-item__image" src="http://placehold.it/260x195" width="260" height="195" alt="Корзинка для белья">
+            <p class="catalog-item__description">Диаметр 15 см, высота 10 см</p>
+            <b class="catalog-item__price">690 руб.</b>
+            <a class="catalog-item__add-to-cart" href="#">Добавить в корзину</a>
+          </li>
+          <li class="catalog__item catalog-item">
+            <h2 class="catalog-item__title">Большая корзинка для игрушек</h2>
+            <img class="catalog-item__image" src="http://placehold.it/260x195" width="260" height="195" alt="Зайчик-попрыгайчик">
+            <p class="catalog-item__description">Диаметр 30 см, высота 30 см</p>
+            <b class="catalog-item__price">1 500 руб.</b>
+            <a class="catalog-item__add-to-cart" href="#">Добавить в корзину</a>
+          </li>
+        </ul>
+      </section>
+      <section class="page-main__production-process production-process">
+        <h2 class="production-process__title">Процесс производства</h2>
+        <video class="production-process__video" width="260" height="150" controls preload="metadata" poster="http://placehold.it/260x150">
+          <source src="video.mp4" type="video/mp4">
+          <source src="video.ogv" type="video/ogg">
+          <source src="video.webm" type="video/webm">
+        </video>
+        <p class="production-process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="production-process__order button" href="form.html">Сделать заказ</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <section class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#">Инстаграмм</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="#">Фейсбук</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--twitter" href="#">Твиттер</a>
+          </li>
+        </ul>
+      </section>
+      <section class="page-footer__copyright copyright">
+        <b class="copyright__text">Разработано</b>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      </section>
+    </footer>
+  </body>
+</html>
