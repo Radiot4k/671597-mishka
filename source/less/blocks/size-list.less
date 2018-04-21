@@ -1,0 +1,49 @@
+.size-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+}
+
+.size-list__label {
+  display: block;
+  cursor: pointer;
+
+  &:hover::after {
+    border-color: rgba(68, 68, 68, 0.3);
+  }
+
+  &::after {
+    content: "";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 50px;
+
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 16px;
+    font-family: "OpenSans", "Arial", sans-serif;
+    color: #000000;
+    text-align: center;
+
+    border: 2px solid rgba(68, 68, 68, 0.1);
+  }
+
+  &--s::after {
+    content: "S";
+  }
+
+  &--m::after {
+    content: "M";
+  }
+
+  &--l::after {
+    content: "L";
+  }
+}
+
+.size-list__input:checked ~ .size-list__label::after {
+  border-color: #62d1ba;
+}

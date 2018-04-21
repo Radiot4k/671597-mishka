@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Мишка - Вязание на заказ</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="http://placehold.it/86x35" width="86" height="35" alt="Логотип магазина «Мишка»">
+      <a class="page-header__logo page-header__logo--link" href="index.html">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list menu-list">
             <li class="menu-list__item">
-              <a href="catalog.html">Каталог товаров</a>
+              <a class="menu-list__link" href="catalog.html">Каталог товаров</a>
             </li>
             <li class="menu-list__item">
-              <a>Вязание на заказ</a>
+              <a class="menu-list__link menu-list__link--current">Вязание на заказ</a>
             </li>
           </ul>
           <form class="main-nav__search-form search-form" action="https://echo.htmlacademy.ru" method="post">
@@ -78,15 +79,15 @@
           <fieldset class="form__fieldset">
             <legend class="form__legend">ФИО</legend>
             <ul class="form__list">
-              <li class="form__option">
+              <li class="form__option-text">
                 <label class="form__label" for="option-name">Имя:</label>
                 <input class="form__text" id="option-name" type="text" name="name" placeholder="Введите ваше имя*" required>
               </li>
-              <li class="form__option">
+              <li class="form__option-text">
                 <label class="form__label" for="option-surname">Фамилия:</label>
                 <input class="form__text" id="option-surname" type="text" name="surname" placeholder="Укажите фамилию*" required>
               </li>
-              <li class="form__option">
+              <li class="form__option-text">
                 <label class="form__label" for="option-middle-name">Отчество:</label>
                 <input class="form__text" id="option-middle-name" type="text" name="middle-name" placeholder="Отчество, если желаете">
               </li>
@@ -95,7 +96,7 @@
           <fieldset class="form__fieldset">
             <legend class="form__legend">Тел</legend>
             <ul class="form__list">
-              <li class="form__option">
+              <li class="form__option-text">
                 <label class="visually-hidden" for="option-phone">Номер телефона:</label>
                 <input class="form__text form__text--phone" id="option-phone" type="tel" name="phone-number" placeholder="+7 ХХХ ХХ ХХ*" required>
               </li>
@@ -104,7 +105,7 @@
           <fieldset class="form__fieldset">
             <legend class="form__legend" lang="en">E-mail</legend>
             <ul class="form__list">
-              <li class="form__option">
+              <li class="form__option-text">
                 <label class="visually-hidden" for="option-email" lang="en">E-mail:</label>
                 <input class="form__text form__text--email" id="option-email" type="email" name="email" placeholder="Ваш Email*" required>
               </li>
@@ -113,9 +114,9 @@
           <fieldset class="form__fieldset">
             <legend class="form__legend">Доп</legend>
             <ul class="form__list">
-              <li class="form__option">
+              <li class="form__option-text">
                 <label class="visually-hidden" for="option-text">Комментарий:</label>
-                <textarea id="option-text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <textarea class="form__textarea" id="option-text" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </li>
             </ul>
           </fieldset>
@@ -128,19 +129,25 @@
       <section class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--instagram" href="#">Инстаграмм</a>
+            <a class="social__link social__link--instagram" href="#">
+              <span class="visually-hidden">Инстаграмм</span>
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--fb" href="#">Фейсбук</a>
+            <a class="social__link social__link--fb" href="#">
+              <span class="visually-hidden">Фейсбук</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Твиттер</a>
+            <a class="social__link social__link--twitter" href="#">
+              <span class="visually-hidden">Твиттер</span>
+            </a>
           </li>
         </ul>
       </section>
       <section class="page-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden" lang="en">HTML Academy</span></a>
       </section>
     </footer>
   </body>
