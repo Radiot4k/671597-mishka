@@ -19,7 +19,7 @@
 
 .good__title {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
   padding: 0;
 
   font-style: normal;
@@ -57,7 +57,7 @@
 
 .good__price {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   padding: 0;
 
   font-style: normal;
@@ -66,13 +66,12 @@
   line-height: 24px;
   font-family: @font;
   text-align: center;
+  letter-spacing: 0.6px;
 }
 
 .good__order {
   box-sizing: border-box;
-  margin: 0;
-  margin-bottom: 36px;
-  padding: 0;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {
@@ -106,8 +105,8 @@
   }
 
   .good__description {
-    width: 43%;
-    margin-bottom: 35px;
+    width: 42%;
+    margin-bottom: 37px;
 
     font-size: 17px;
     line-height: 30px;
@@ -115,13 +114,14 @@
 
   .good__specification {
     width: 43%;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
   }
 
   .good__image {
     position: absolute;
     top: 7px;
     right: 0;
+    z-index: -1;
     width: 333px;
     height: 404px;
   }
@@ -139,8 +139,47 @@
 }
 
 @media (min-width: 1150px) {
+  .good__title {
+    margin-left: 27px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
   .good__good-of-week {
     order: -1;
-    margin-left: 45px;
+    margin-top: 14px;
+    margin-left: 32px;
+  }
+
+  .good__wrapper {
+    margin-left: 175px;
+  }
+
+  .good__description {
+    width: 293px;
+    margin-bottom: 48px;
+  }
+
+  .good__specification {
+    width: 293px;
+    margin-bottom: 111px;
+  }
+
+  .good__image {
+    top: -159px;
+    width: 525px;
+    height: 636px;
+  }
+
+  .good__price {
+    width: 293px;
+    margin-bottom: 33px;
+
+    font-size: 20px;
+  }
+
+  .good__order {
+    width: 293px;
   }
 }
