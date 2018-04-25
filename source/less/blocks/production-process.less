@@ -1,27 +1,120 @@
+.production-process {
+  display: flex;
+  flex-direction: column;
+}
+
 .production-process__wrapper {
-  border: 1px solid #ececec;
+  padding: 29px 33px 25px;
+
+  border: 1px solid @color-border;
+
+  &:last-child {
+    padding: 33px;
+  }
 }
 
 .production-process__title {
-  margin: 25px 30px;
+  margin: 0;
   padding: 0;
 
   font-style: normal;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
-  font-family: "OpenSans", "Arial", sans-serif;
-  color: #000000;
+  font-family: @font;
+  color: @color-heading;
+}
+
+.production-process__video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+  outline: #91b1d4 solid 2px; /*временно*/
+  outline-offset: -2px;
 }
 
 .production-process__text {
-  margin: 30px 30px 25px;
+  margin: 0;
+  margin-bottom: 28px;
   padding: 0;
 
   font-size: 13px;
 }
 
 .production-process__order {
-  display: inline-block;
-  margin: 0 30px 33px;
+  display: block;
+
+  line-height: 16px;
+}
+
+@media (min-width: 768px) {
+  .production-process__video {
+    order: -1;
+    width: 100%;
+    height: auto;
+  }
+
+  .production-process__wrapper {
+    padding: 40px 42px;
+
+    &:first-child {
+      padding-bottom: 0;
+
+      border-bottom: none;
+    }
+
+    &:last-child {
+      padding: 0 42px 46px;
+
+      border-top: none;
+    }
+  }
+
+  .production-process__title {
+    margin-bottom: 40px;
+
+    font-size: 20px;
+  }
+
+  .production-process__text {
+    margin-bottom: 40px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .production-process {
+    flex-wrap: wrap;
+    height: 455px;
+  }
+
+  .production-process__video {
+    order: -1;
+    width: 682px;
+    height: 455px;
+  }
+
+  .production-process__wrapper {
+    box-sizing: border-box;
+    width: 368px;
+    padding: 90px 60px 0 78px;
+
+    &:last-child {
+      padding: 0 60px 60px 78px;
+
+      border-top: none;
+    }
+  }
+
+  .production-process__title {
+    margin-bottom: 37px;
+  }
+
+  .production-process__text {
+    margin-bottom: 50px;
+  }
 }
