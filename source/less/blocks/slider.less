@@ -1,4 +1,27 @@
 .slider__buttons {
   display: flex;
+  width: 100%;
   margin-bottom: 38px;
+}
+
+.slider__prev {
+  width: 50%;
+}
+
+.slider__next {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .slider {
+    position: relative;
+  }
+
+  .slider__buttons {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 165px;
+    margin: 0;
+  }
 }
