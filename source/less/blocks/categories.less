@@ -1,14 +1,14 @@
 .categories__list {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
 
   list-style: none;
 }
 
 .categories__item {
-  margin: 0;
-  padding: 0;
-
   &--interior {
     background-color: @color-highlight;
   }
@@ -19,18 +19,19 @@
 }
 
 .categories__link {
-  font-style: normal;
-  font-size: 19px;
-  font-weight: 700;
-  line-height: 24px;
-  font-family: @font;
   color: @color-primary;
   text-decoration: none;
 }
 
 .categories__title {
   margin: 0;
-  padding: 27px 30px;
+  padding: 27px 30px 28px;
+
+  font-style: normal;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: @font;
 }
 
 @media (min-width: 768px) {
@@ -44,11 +45,19 @@
     width: 50%;
     margin-top: -119px;
   }
-}
 
-@media (min-width: 768px) {
-  .categories__link {
+  .categories__title {
+    padding-left: 35px;
+
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+@media (min-width: 1150px) {
+  .categories__list {
+    max-width: 1150px;
+  }
+
+
 }
