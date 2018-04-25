@@ -6,35 +6,127 @@
 .contacts__title {
   margin: 0;
   margin-bottom: 35px;
-  padding: 0;
+  padding: 0 30px;
 
   font-style: normal;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
-  font-family: "OpenSans", "Arial", sans-serif;
-  color: #000000;
+  font-family: @font;
+  color: @color-heading;
+}
+
+.contacts__wrapper {
+  margin-bottom: 40px;
+  padding: 0 30px;
 }
 
 .contacts__info {
+  display: flex;
   margin: 0;
-  margin-bottom: 35px;
-  padding: 0;
 
   &--email {
-    color: #444444;
+    margin-left: 30px;
+
+    color: @font-color;
     text-decoration: none;
 
-    border-bottom: 1px solid #62d1ba;
+    border-bottom: 1px solid @color-highlight;
+  }
+
+  &--address {
+    margin-left: 30px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
   }
 }
 
 .contacts__map-image {
+  width: 100%;
   margin: 0;
   margin-bottom: 39px;
   padding: 0;
 }
 
 .contacts__write {
-  margin-bottom: 39px;
+  margin: 0 30px;
+  padding-right: 42px;
+  padding-left: 42px;
+}
+
+@media (min-width: 768px) {
+  .contacts__title {
+    margin-bottom: 55px;
+    padding: 0 50px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .contacts__wrapper {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 60px;
+  }
+
+  .contacts__info {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0 50px;
+
+    &:last-child {
+      padding-left: 0;
+    }
+  }
+
+  .contacts__map-image {
+    margin-bottom: 55px;
+  }
+
+  .contacts__write {
+    align-self: center;
+  }
+}
+
+@media (min-width: 1150px) {
+  .contacts {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .contacts__title {
+    box-sizing: border-box;
+    width: 50%;
+    margin-top: 80px;
+    padding: 0 175px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .contacts__wrapper {
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 50%;
+    padding-left: 175px;
+  }
+
+  .contacts__info {
+    width: 100%;
+    padding: 0;
+  }
+
+  .contacts__map-image {
+    order: 1;
+    width: 525px;
+    height: 457px;
+    margin-bottom: 0;
+  }
+
+  .contacts__write {
+    align-self: flex-start;
+    margin-left: 175px;
+  }
 }
