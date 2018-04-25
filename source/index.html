@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мишка - милые штуки ручной работы для дома</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -11,23 +12,35 @@
         <img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="form.html">Вязание на заказ</a>
-            </li>
-          </ul>
-          <form class="main-nav__search-form search-form" action="https://echo.htmlacademy.ru" method="post">
-            <input class="search-form__input" id="search-input" type="search" name="search-input" placeholder="Поиск по сайту">
-            <label class="visually-hidden" for="search-input">Поиск по сайту</label>
-          </form>
-          <a class="main-nav__cart cart" href="#">Корзина: <span class="cart__counter">пока пуста</span></a>
-        </div>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__list menu-list">
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
       </nav>
+      <ul class="secondary-menu">
+        <li class="secondary-menu__item">
+          <a class="secondary-menu__link secondary-menu__link--search" href="#">
+            <span class="secondary-menu__text">Поиск по сайту</span>
+          </a>
+        </li>
+        <li class="secondary-menu__item">
+          <a class="secondary-menu__link" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+      <ul class="additional-menu">
+        <li class="additional-menu__item">
+          <a class="additional-menu__link" href="#">Новые поступления</a>
+        </li>
+        <li class="additional-menu__item">
+          <a class="additional-menu__link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <p class="page-header__delivery">Бесплатная доставка по России</p>
     </header>
     <main class="page-main">
       <h1 class="page-main__title page-main__title--index">Милые штуки ручной работы для дома</h1>
@@ -46,10 +59,10 @@
           </li>
         </ul>
       </section>
-      <section class="page-main__good-of-week good-of-week">
-        <h2 class="good-of-week__title">Товар недели</h2>
-        <article class="good-of-week__item good">
-          <h1 class="good__title">Вязаные корзинки</h1>
+      <article class="page-main__good-of-week good container">
+        <h1 class="good__title">Вязаные корзинки</h1>
+        <p class="good__good-of-week">Товар недели</p>
+        <div class="good__wrapper">
           <p class="good__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="good__specification good-specification">
             <tr class="good-specification__row">
@@ -68,8 +81,8 @@
           <img class="good__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
           <p class="good__price">Цена 990 руб.</p>
           <a class="good__order button" href="#">Заказать</a>
-        </article>
-      </section>
+        </div>
+      </article>
       <section class="page-main__about-us about-us">
         <h2 class="about-us__title">Коротко о нас</h2>
         <ul class="about-us__advantages advantages">

@@ -1,9 +1,10 @@
 .good-specification {
+  width: 100%;
   border-collapse: collapse;
 }
 
 .good-specification__row {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid @color-border;
 }
 
 .good-specification__field {
@@ -14,4 +15,20 @@
 .good-specification__value {
   width: 62%;
   padding: 8px 0;
+}
+
+@media (min-width: 768px) {
+  .good-specification {
+    width: 43%;
+  }
+}
+
+@media (min-width: 768px) {
+  .good-specification__field {
+    width: 32%;
+  }
+
+  .good-specification__value {
+    width: 68%;
+  }
 }
