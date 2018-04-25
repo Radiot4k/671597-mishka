@@ -1,3 +1,8 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+}
+
 .advantages__item {
   margin-bottom: 28px;
 
@@ -7,4 +12,44 @@
   line-height: 20px;
   font-family: @font;
   color: @color-heading;
+}
+
+@media (min-width: 768px) {
+  .advantages {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    box-sizing: border-box;
+    width: 50%;
+    padding-right: 50px;
+
+    font-size: 20px;
+    line-height: 22px;
+
+    &--materials {
+      order: 0;
+    }
+
+    &--style {
+      order: 2;
+    }
+
+    &--likes {
+      order: 4;
+    }
+
+    &--with-love {
+      order: 1;
+    }
+
+    &--support {
+      order: 3;
+    }
+
+    &--gift-box {
+      order: 5;
+    }
+  }
 }
