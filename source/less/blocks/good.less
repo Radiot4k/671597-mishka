@@ -3,22 +3,42 @@
   flex-direction: column;
 }
 
+.good__good-of-week {
+  margin: 0;
+  margin-bottom: 22px;
+  padding: 0;
+
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  font-family: @font;
+  color: @color-highlight;
+  text-transform: uppercase;
+}
+
 .good__title {
   margin: 0;
-  margin-bottom: 47px;
+  margin-bottom: 4px;
   padding: 0;
 
   font-style: normal;
   font-size: 25px;
   font-weight: 700;
   line-height: 30px;
-  font-family: "OpenSans", "Arial", sans-serif;
-  color: #000000;
+  font-family: @font;
+  color: @color-heading;
+  letter-spacing: 1px;
+}
+
+.good__wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .good__description {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
   padding: 0;
 }
 
@@ -29,26 +49,137 @@
 }
 
 .good__image {
+  width: 100%;
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
 }
 
 .good__price {
-  align-self: center;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 26px;
   padding: 0;
 
   font-style: normal;
   font-size: 17px;
   font-weight: 700;
   line-height: 24px;
-  font-family: "OpenSans", "Arial", sans-serif;
+  font-family: @font;
+  text-align: center;
+  letter-spacing: 0.6px;
 }
 
 .good__order {
-  margin: 0;
-  margin-bottom: 36px;
-  padding: 0;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .good {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .good__good-of-week {
+    width: 100px;
+    margin-top: 11px;
+    margin-right: 13px;
+    margin-bottom: 0;
+    margin-left: auto;
+
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .good__title {
+    margin-bottom: 48px;
+    margin-left: -3px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .good__wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .good__description {
+    width: 42%;
+    margin-bottom: 37px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .good__specification {
+    width: 43%;
+    margin-bottom: 56px;
+  }
+
+  .good__image {
+    position: absolute;
+    top: 7px;
+    right: 0;
+    z-index: -1;
+    width: 333px;
+    height: 404px;
+  }
+
+  .good__price {
+    width: 43%;
+    margin-bottom: 33px;
+
+    font-size: 20px;
+  }
+
+  .good__order {
+    width: 43%;
+  }
+}
+
+@media (min-width: 1150px) {
+  .good__title {
+    margin-left: 27px;
+
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .good__good-of-week {
+    order: -1;
+    margin-top: 14px;
+    margin-left: 32px;
+  }
+
+  .good__wrapper {
+    margin-left: 175px;
+  }
+
+  .good__description {
+    width: 293px;
+    margin-bottom: 48px;
+  }
+
+  .good__specification {
+    width: 293px;
+    margin-bottom: 111px;
+  }
+
+  .good__image {
+    top: -159px;
+    width: 525px;
+    height: 636px;
+  }
+
+  .good__price {
+    width: 293px;
+    margin-bottom: 33px;
+
+    font-size: 20px;
+  }
+
+  .good__order {
+    width: 293px;
+  }
 }

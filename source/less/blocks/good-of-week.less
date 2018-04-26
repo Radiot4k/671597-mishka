@@ -4,7 +4,7 @@
 
 .good-of-week__title {
   position: absolute;
-  top: 33px;
+  top: 63px;
   margin: 0;
   padding: 0;
 
@@ -12,11 +12,17 @@
   font-size: 17px;
   font-weight: 700;
   line-height: 20px;
-  font-family: "OpenSans", "Arial", sans-serif;
-  color: #63d1bb;
+  font-family: @font;
+  color: @color-highlight;
 }
 
 .good-of-week__item {
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: 768px) {
+  .good-of-week__title {
+    line-height: 17px;
+  }
 }

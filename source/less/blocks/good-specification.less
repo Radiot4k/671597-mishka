@@ -3,15 +3,35 @@
 }
 
 .good-specification__row {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid @color-border;
 }
 
 .good-specification__field {
   width: 38%;
-  padding: 8px 0;
+  padding: 7px 0 8px;
 }
 
 .good-specification__value {
   width: 62%;
-  padding: 8px 0;
+  padding: 7px 0 8px;
+}
+
+@media (min-width: 768px) {
+  .good-specification {
+    width: 43%;
+  }
+
+  .good-specification__field {
+    width: 34%;
+  }
+
+  .good-specification__value {
+    width: 66%;
+  }
+}
+
+@media (min-width: 1150px) {
+  .good-specification {
+    width: 293px;
+  }
 }
