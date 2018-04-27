@@ -14,6 +14,8 @@
 }
 
 .secondary-menu__link {
+  position: relative;
+
   display: block;
   padding: 27px 0 28px 45px;
 
@@ -33,6 +35,41 @@
   }
 
   &:active {
+    opacity: 0.3;
+  }
+
+  &--search svg {
+    position: absolute;
+    left: 2px;
+    top: 32px;
+
+    width: 18px;
+    height: 18px;
+  }
+
+  &--cart svg {
+    position: absolute;
+    left: 0;
+    top: 32px;
+
+    width: 21px;
+    height: 18px;
+  }
+
+  &--search path,
+  &--cart path {
+    opacity: 0.2;
+  }
+
+  &--search:hover path,
+  &--cart:hover path {
+    fill: @color-highlight;
+    opacity: 1;
+  }
+
+  &--search:active path
+  &--cart:active path {
+    fill: @color-highlight;
     opacity: 0.3;
   }
 }
