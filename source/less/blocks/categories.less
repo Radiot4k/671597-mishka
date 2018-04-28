@@ -98,11 +98,11 @@
   font-family: @font;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .categories__list {
     flex-direction: row;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0;
   }
 
   .categories__item {
@@ -110,9 +110,35 @@
     margin-top: -119px;
   }
 
-  .categories__title {
-    padding-left: 35px;
+  .categories__link {
+    &--interior {
+      padding: 28.5px 10.48%;
+    }
 
+    &--interior svg {
+      margin-right: 2px;
+    }
+
+    &--toys {
+      padding: 29.5px 10.48%;
+    }
+
+    &--toys svg {
+      margin-right: -1px;
+    }
+
+    &--interior:hover,
+    &--interior:focus {
+      padding-bottom: 33.5px;
+    }
+
+    &--toys:hover,
+    &--toys:focus {
+      padding-bottom: 34.5px;
+    }
+  }
+
+  .categories__title {
     font-size: 20px;
     line-height: 30px;
   }
@@ -121,5 +147,10 @@
 @media (min-width: 1150px) {
   .categories__list {
     max-width: 1150px;
+  }
+
+  .categories__link {
+    padding-right: 35px;
+    padding-left: 35px;
   }
 }
