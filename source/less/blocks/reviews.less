@@ -5,7 +5,7 @@
 
 .reviews__title {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
   padding: 0;
 
   font-style: normal;
@@ -22,11 +22,11 @@
 }
 
 .reviews__write {
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 36px;
+  padding-left: 36px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .reviews {
     flex-direction: row;
     justify-content: space-between;
@@ -40,7 +40,7 @@
   }
 
   .reviews__title {
-    margin-bottom: 43px;
+    margin-bottom: 47px;
 
     font-size: 43px;
     line-height: 50px;
@@ -53,7 +53,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .reviews {
     background-position: 50px 0;
   }
@@ -66,5 +66,9 @@
 
   .reviews__list {
     padding-left: 175px;
+  }
+
+  .reviews__write {
+    margin-top: 7px;
   }
 }
