@@ -15,12 +15,12 @@
 
   &:hover:last-of-type,
   &:hover + .production-process__wrapper:last-of-type {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 10px 0 fade(@color-heading, 10%);
   }
 
   &:active:last-of-type,
   &:active + .production-process__wrapper:last-of-type {
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px 0 fade(@color-heading, 10%);
   }
 
   &:hover .production-process__title {
@@ -68,7 +68,7 @@
   line-height: 16px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .production-process__video {
     order: -1;
     width: 100%;
@@ -105,7 +105,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .production-process {
     flex-wrap: wrap;
     height: 455px;

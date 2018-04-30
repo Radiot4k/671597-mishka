@@ -28,7 +28,8 @@
 
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
@@ -60,7 +61,9 @@
   }
 
   &--search:hover path,
-  &--cart:hover path {
+  &--search:focus path,
+  &--cart:hover path,
+  &--cart:focus path {
     fill: @color-highlight;
     opacity: 1;
   }

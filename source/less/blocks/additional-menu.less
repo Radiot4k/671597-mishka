@@ -27,7 +27,8 @@
 
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
@@ -36,7 +37,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .additional-menu {
     display: flex;
   }
