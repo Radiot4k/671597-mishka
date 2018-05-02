@@ -4,13 +4,18 @@
 }
 
 .production-process__wrapper {
-  padding: 29px 33px 25px;
+  padding: 26px 39px 25px;
 
   border: 1px solid @color-border;
 
+  &:first-of-type {
+    display: flex;
+    align-items: center;
+  }
+
   &:last-of-type {
     order: 1;
-    padding: 33px;
+    padding: 25px 39px 33px;
   }
 
   &:hover:last-of-type,
@@ -30,6 +35,14 @@
   &:active .production-process__title {
     opacity: 0.3;
   }
+
+  svg {
+    width: 32px;
+    height: 22px;
+    margin-right: 35px;
+
+    fill: @color-highlight;
+  }
 }
 
 .production-process__title {
@@ -46,17 +59,14 @@
 
 .production-process__video {
   display: block;
-  width: 100%;
-  height: auto;
+  width: 260px;
+  height: 150px;
   margin: 0 auto;
-
-  outline: #91b1d4 solid 2px; /*временно*/
-  outline-offset: -2px;
 }
 
 .production-process__text {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 23px;
   padding: 0;
 
   font-size: 13px;
@@ -64,41 +74,39 @@
 
 .production-process__order {
   display: block;
-
-  line-height: 16px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 @media (min-width: @tablet-width) {
   .production-process__video {
     order: -1;
-    width: 100%;
-    height: auto;
+    width: 668px;
+    height: 455px;
   }
 
   .production-process__wrapper {
-    padding: 40px 42px;
+    padding: 39px;
 
     &:first-of-type {
-      padding-bottom: 0;
+      padding-bottom: 33px;
 
       border-bottom: none;
     }
 
     &:last-of-type {
-      padding: 0 42px 46px;
+      padding: 0 39px 46px;
 
       border-top: none;
     }
   }
 
   .production-process__title {
-    margin-bottom: 40px;
-
     font-size: 20px;
   }
 
   .production-process__text {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
 
     font-size: 15px;
     line-height: 30px;
@@ -119,23 +127,38 @@
 
   .production-process__wrapper {
     box-sizing: border-box;
-    width: 369px;
-    padding: 90px 80px 0;
+    width: 367px;
+    padding: 48px 80px 0;
 
     border-left: none;
 
+    &:first-of-type {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 48px 60px 0 78px;
+    }
+
     &:last-of-type {
-      padding: 0 65px 60px 78px;
+      flex-grow: 1;
+      padding: 0 60px 60px 78px;
 
       border-top: none;
+    }
+
+    svg {
+      margin-bottom: 24px;
     }
   }
 
   .production-process__title {
-    margin-bottom: 37px;
+    margin-bottom: 34px;
   }
 
   .production-process__text {
-    margin-bottom: 50px;
+    margin-bottom: 45px;
+  }
+
+  .production-process__order {
+    width: 100%;
   }
 }
