@@ -1,31 +1,107 @@
-.main-nav {
-  display: flex;
-  flex-direction: column;
+.main-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-top: 24px;
+  margin-right: 8.1%;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-.main-nav__toggle {
-  display: none;
+.main-nav--closed .main-nav__toggle {
+  background-image: url("../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-nav--opened .main-nav__toggle {
+  background-image: url("../img/icon-menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-nav__list {
   list-style: none;
 }
 
-@media (min-width: 768px) {
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed:not(.main-nav--nojs) .main-nav__wrapper {
+    transform: translateY(-100%);
+  }
+
+  .main-nav__wrapper {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+
+    width: 320px;
+
+    background-color: @bg-color;
+    transition: transform 0.4s ease-out;
+  }
+
+  .main-nav--nojs .menu-list__link,
+  .main-nav--nojs .secondary-menu__link {
+    padding-left: 23.44%;
+  }
+
+  .main-nav--nojs .secondary-menu__link svg {
+    left: 9.38%;
+  }
+
+  .main-nav--nojs .main-nav__wrapper {
+    position: static;
+
+    display: block;
+    width: 100%;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+}
+
+.main-nav__delivery {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
   .main-nav {
-    flex-direction: row;
-    order: 1;
-    margin-top: 19px;
+    width: 100%;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .main-nav__toggle {
     display: none;
   }
+
+  .main-nav__delivery {
+    display: block;
+    margin-bottom: 0;
+    margin-top: 19px;
+    margin-left: auto;
+    margin-right: 6.51%;
+  }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .main-nav {
     order: -1;
     margin: 0;
+  }
+
+  .main-nav__delivery {
+    margin-right: 50px;
   }
 }

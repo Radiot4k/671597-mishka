@@ -2,7 +2,7 @@
   box-sizing: border-box;
   height: 177px;
   margin: 0 auto;
-  padding: 72px 30px;
+  padding: 72px 9.38%;
 
   font-style: normal;
   font-size: 27px;
@@ -11,7 +11,7 @@
   font-family: @font;
   color: @color-heading;
   text-align: center;
-  letter-spacing: 1.6px;
+  letter-spacing: 1px;
 
   background-color: @bg-color-alternate;
 
@@ -26,39 +26,38 @@
 }
 
 .page-main__good-of-week {
-  padding: 30px;
+  padding: 28px 9.38% 40px;
 }
 
 .page-main__about-us {
-  padding: 30px;
+  padding: 30px 9.38% 15px;
 }
 
 .page-main__reviews {
-  padding: 30px;
-  padding-bottom: 45px;
+  padding: 12px 9.38% 50px;
 }
 
 .page-main__contacts {
-  padding: 39px 0;
+  padding: 37px 0 39px;
 }
 
 .page-main__catalog {
-  padding: 30px;
+  padding: 30px 9.38%;
 }
 
 .page-main__production-process {
-  padding: 0 30px;
+  padding: 0 9.38%;
   padding-bottom: 58px;
 }
 
 .page-main__custom-make {
-  padding: 28px 30px 55px;
+  padding: 23px 9.38% 44px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .page-main__title {
     height: 226px;
-    padding: 100px 50px;
+    padding: 96px 6.51% 100px;
 
     font-size: 43px;
     line-height: 50px;
@@ -67,43 +66,48 @@
       height: 746px;
       padding-top: 156px;
     }
+
+    &:not(&--index) {
+      box-shadow: inset 0 1px 0 0 #dfdfdf;
+    }
+  }
+
+  .page-main__categories {
+    padding: 0 6.51%;
   }
 
   .page-main__good-of-week {
-    padding: 50px;
-    padding-top: 46px;
+    padding: 46px 6.51% 60px;
   }
 
   .page-main__about-us {
-    padding: 50px;
+    padding: 50px 6.51% 25px;
     padding-top: 60px;
   }
 
   .page-main__reviews {
-    margin-bottom: 68px;
-    padding: 50px;
-    padding-top: 85px;
+    padding: 79px 6.51% 130px;
   }
 
   .page-main__contacts {
-    padding: 70px 0 57px;
+    padding: 67px 0 57px;
   }
 
   .page-main__catalog {
-    padding: 79px 50px 53px;
+    padding: 79px 6.51% 53px;
   }
 
   .page-main__production-process {
-    padding: 0 50px;
+    padding: 0 6.51%;
     padding-bottom: 63px;
   }
 
   .page-main__custom-make {
-    padding: 80px 0 50px;
+    padding: 73px 0 50px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .page-main__title {
     height: 255px;
 
@@ -116,31 +120,35 @@
     }
   }
 
+  .page-main__categories {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
   .page-main__good-of-week {
     max-width: 1050px;
     margin: 0 auto;
-    padding-top: 125px;
+    padding: 125px 50px 80px;
   }
 
   .page-main__about-us {
     max-width: 1050px;
     margin: 0 auto;
-    padding-top: 70px;
+    padding: 78px 50px 31px;
   }
 
   .page-main__reviews {
     max-width: 1050px;
     margin: 0 auto;
     margin-bottom: 67px;
-    padding-top: 80px;
-    padding-bottom: 100px;
+    padding: 72px 50px 100px;
   }
 
   .page-main__contacts {
     max-width: 1050px;
-    height: 457px;
     margin: 0 auto;
-    padding: 70px 50px 105px;
+    padding: 163px 50px 105px;
   }
 
   .page-main__catalog {
@@ -156,6 +164,6 @@
   }
 
   .page-main__custom-make {
-    padding: 128px 0 51px;
+    padding: 122px 0 51px;
   }
 }

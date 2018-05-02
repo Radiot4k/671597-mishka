@@ -6,14 +6,12 @@
 }
 
 .menu-list__item {
-  padding: 0 30px;
-
   box-shadow: inset 0 1px 0 0 @color-border, 0 1px 0 0 @color-border;
 }
 
 .menu-list__link {
   display: block;
-  padding: 27px 0 28px 45px;
+  padding: 27px 30px 28px 75px;
 
   font-style: normal;
   font-size: 17px;
@@ -24,7 +22,8 @@
   text-decoration: none;
   letter-spacing: 0.8px;
 
-  &:hover:not(&--current) {
+  &:hover:not(&--current),
+  &:focus {
     opacity: 0.6;
   }
 
@@ -33,41 +32,40 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .menu-list {
     flex-direction: row;
-    order: 2;
-    margin-left: 50px;
+    flex-wrap: wrap;
+    width: 50%;
+    margin-top: 9px;
+    margin-left: 6.5%;
   }
 
   .menu-list__item {
     margin-right: 30px;
-    padding: 0;
 
     box-shadow: none;
   }
 
   .menu-list__link {
-    padding: 0;
+    padding: 10px 0;
 
     font-size: 15px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .menu-list {
     width: 500px;
     height: 88px;
     margin: 0;
-
-    box-shadow: 0 1px 0 0 @color-border;
   }
 
   .menu-list__item {
     margin: 0;
-    padding: 0;
+    padding: 32px 33px;
 
-    &:first-child .menu-list__link {
+    &:first-child {
       padding-left: 50px;
 
       box-shadow: inset -1px 0 0 0 @color-border;
@@ -75,7 +73,7 @@
   }
 
   .menu-list__link {
-    padding: 32px 33px;
+    padding: 0;
 
     font-size: 17px;
   }

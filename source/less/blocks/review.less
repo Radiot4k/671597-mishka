@@ -1,16 +1,18 @@
 .review {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .review__text {
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   padding: 0;
+
+  line-height: 30px;
 }
 
 .review__author {
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   padding: 0;
 
   font-style: normal;
@@ -29,21 +31,26 @@
   font-style: normal;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .review {
     margin: 0;
   }
 
   .review__text {
-    margin-bottom: 65px;
+    margin-bottom: 60px;
 
     font-size: 17px;
     line-height: 30px;
   }
+
+  .review__author {
+    margin-bottom: 8px;
+  }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .review__text {
-    margin-bottom: 50px;
+    width: 800px;
+    margin-bottom: 42px;
   }
 }

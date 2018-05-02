@@ -16,11 +16,7 @@
   padding: 7px 0 8px;
 }
 
-@media (min-width: 768px) {
-  .good-specification {
-    width: 43%;
-  }
-
+@media (min-width: @tablet-width) {
   .good-specification__field {
     width: 34%;
   }
@@ -30,8 +26,14 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .good-specification {
     width: 293px;
+    margin-bottom: 109px;
+  }
+
+  .good-specification__field,
+  .good-specification__value {
+    padding-bottom: 9px;
   }
 }

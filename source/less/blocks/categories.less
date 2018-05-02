@@ -8,24 +8,88 @@
   list-style: none;
 }
 
-.categories__item {
+.categories__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: @color-primary;
+  text-decoration: none;
+
   &--interior {
+    padding: 20.5px 9.4%;
+
     background-color: @color-highlight;
+    transition: 0.4s ease-out;
+  }
+
+  &--interior svg {
+    width: 40px;
+    height: 62px;
+    margin-right: 6px;
+
+    fill: #149080;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-out;
   }
 
   &--toys {
-    background-color: @color-highlight-2;
-  }
-}
+    padding: 21.5px 9.4%;
 
-.categories__link {
-  color: @color-primary;
-  text-decoration: none;
+    background-color: @color-highlight-2;
+    transition: 0.4s ease-out;
+  }
+
+  &--toys svg {
+    width: 60px;
+    height: 60px;
+    margin-right: -3px;
+  }
+
+  &--toys path {
+    fill: #149080;
+    opacity: 0.5;
+    transition: opacity 0.2s ease-out;
+  }
+
+  &--interior:hover,
+  &--interior:focus {
+    margin-top: -5px;
+    padding-bottom: 25.5px;
+
+    background-color: #59d5bc;
+
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &--toys:hover,
+  &--toys:focus {
+    margin-top: -5px;
+    padding-bottom: 26.5px;
+
+    background-color: #46c1ae;
+
+    path {
+      opacity: 0.7;
+    }
+  }
+
+  &:active .categories__title {
+    opacity: 0.3;
+    transition: none;
+  }
+
+  &--interior:active svg,
+  &--toys:active path {
+    opacity: 0.3;
+    transition: none;
+  }
 }
 
 .categories__title {
   margin: 0;
-  padding: 27px 30px 28px;
 
   font-style: normal;
   font-size: 19px;
@@ -34,11 +98,11 @@
   font-family: @font;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .categories__list {
     flex-direction: row;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0;
   }
 
   .categories__item {
@@ -46,16 +110,47 @@
     margin-top: -119px;
   }
 
-  .categories__title {
-    padding-left: 35px;
+  .categories__link {
+    &--interior {
+      padding: 28.5px 10.48%;
+    }
 
+    &--interior svg {
+      margin-right: 2px;
+    }
+
+    &--toys {
+      padding: 29.5px 10.48%;
+    }
+
+    &--toys svg {
+      margin-right: -1px;
+    }
+
+    &--interior:hover,
+    &--interior:focus {
+      padding-bottom: 33.5px;
+    }
+
+    &--toys:hover,
+    &--toys:focus {
+      padding-bottom: 34.5px;
+    }
+  }
+
+  .categories__title {
     font-size: 20px;
     line-height: 30px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .categories__list {
     max-width: 1150px;
+  }
+
+  .categories__link {
+    padding-right: 35px;
+    padding-left: 35px;
   }
 }

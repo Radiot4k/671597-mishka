@@ -1,9 +1,3 @@
-.copyright {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .copyright__text {
   margin-right: 30px;
 
@@ -16,11 +10,25 @@
 }
 
 .copyright__link {
-  display: block;
-  width: 27px;
-  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
 
   svg {
+    width: 27px;
+    height: 34px;
+
     fill: @color-highlight;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
