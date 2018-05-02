@@ -189,8 +189,9 @@
 }
 
 .form__text {
+  box-sizing: border-box;
   flex-grow: 1;
-  padding: 17px 0;
+  padding: 17px 0 15px;
 
   font-style: normal;
   font-size: 17px;
@@ -200,16 +201,16 @@
   color: fade(@font-color, 30%);
 
   border: none;
-  box-shadow: inset 0 -2px 0 0 @color-heading;
+  border-bottom: 2px solid @color-heading;
 
   &:hover {
-    box-shadow: inset 0 -2px 0 0 #63d1ba;
+    border-bottom-color: #63d1ba;
   }
 
   &:focus {
     color: @font-color;
 
-    box-shadow: inset 0 -2px 0 0 #63d1ba;
+    border-bottom-color: #63d1ba;
   }
 
   &::-webkit-input-placeholder {
@@ -271,6 +272,7 @@
   color: fade(@font-color, 30%);
 
   border: 2px solid @color-heading;
+  border-radius: 0;
 
   &::-webkit-input-placeholder {
     font-style: normal;
@@ -394,7 +396,7 @@
   }
 
   .form__text {
-    padding: 15.5px 18px;
+    padding: 15px 18px 14px;
 
     font-size: 19px;
 
