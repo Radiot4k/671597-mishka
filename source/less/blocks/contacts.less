@@ -77,6 +77,26 @@
 }
 
 @media (min-width: @tablet-width) {
+  .contacts {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50px;
+      right: 6.51%;
+
+      width: 47px;
+      height: 81px;
+      margin-right: 3px;
+
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 47px 81px;
+    }
+  }
+
   .contacts__title {
     margin-bottom: 47px;
     padding: 0 6.51%;
@@ -119,7 +139,11 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    position: relative;
+    &::before {
+      top: 153px;
+      right: auto;
+      left: 113px;
+    }
   }
 
   .contacts__title {
