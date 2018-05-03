@@ -9,7 +9,6 @@ body {
   line-height: 24px;
   font-family: @font;
   color: @font-color;
-  letter-spacing: 0.5px;
 
   background-color: @bg-color;
 }
@@ -45,4 +44,25 @@ img {
   height: 100%;
 
   background-color: fade(@bg-color, 90%);
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: 767px;
+  margin: 0 auto;
+  padding: 0 9.38%;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    max-width: 1149px;
+    padding: 0 6.51%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    max-width: 1150px;
+    padding: 0 50px;
+  }
 }
