@@ -120,24 +120,19 @@
 
   .categories__item {
     width: 50%;
-    margin-top: -119px;
   }
 
   .categories__link {
-    &--interior {
-      padding: 28.5px 10.48%;
-    }
+    padding: 29.5px 10.48%;
 
     &--interior svg {
-      margin-right: 2px;
-    }
-
-    &--toys {
-      padding: 29.5px 10.48%;
+      margin-top: 10px;
+      margin-right: -5px;
     }
 
     &--toys svg {
-      margin-right: -1px;
+      margin-top: 10px;
+      margin-right: 2px;
     }
 
     &--interior:hover,
@@ -158,12 +153,25 @@
 }
 
 @media (min-width: @desktop-width) {
-  .categories__list {
-    max-width: 1150px;
-  }
-
   .categories__link {
-    padding-right: 35px;
-    padding-left: 35px;
+    padding: 28px 36px 31px;
+
+    &--interior:hover,
+    &--interior:focus {
+      padding-bottom: 36px;
+    }
+
+    &--toys:hover,
+    &--toys:focus {
+      padding-bottom: 36px;
+    }
+
+    &--interior svg {
+      margin-right: -23px;
+    }
+
+    &--toys svg {
+      margin-right: -14px;
+    }
   }
 }
