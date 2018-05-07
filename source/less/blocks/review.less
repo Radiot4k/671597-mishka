@@ -12,7 +12,7 @@
 
 .review__author {
   margin: 0;
-  margin-bottom: 7px;
+  margin-bottom: 9px;
   padding: 0;
 
   font-style: normal;
@@ -24,11 +24,8 @@
 }
 
 .review__author-email {
-  margin: 0;
-  margin-bottom: 10px;
-  padding: 0;
-
   font-style: normal;
+  letter-spacing: 1px;
 }
 
 @media (min-width: @tablet-width) {
@@ -45,12 +42,18 @@
 
   .review__author {
     margin-bottom: 8px;
+    letter-spacing: 0.7px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .review__text {
     width: 800px;
-    margin-bottom: 42px;
+    margin-bottom: 40px;
+  }
+
+  .review__author {
+    margin-bottom: 9px;
+    letter-spacing: 0;
   }
 }
