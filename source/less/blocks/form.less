@@ -6,7 +6,8 @@
 .form__wrapper {
   display: flex;
   flex-direction: column;
-  margin: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
   &--last {
     margin-top: 0;
@@ -18,8 +19,6 @@
 
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
 
   border: none;
 }
@@ -202,6 +201,7 @@
 
   border: none;
   border-bottom: 2px solid @color-heading;
+  border-radius: 0;
 
   &:hover {
     border-bottom-color: #63d1ba;
@@ -254,7 +254,7 @@
 }
 
 .form__option-textarea {
-  margin-top: 10px;
+  margin-top: 11px;
 }
 
 .form__textarea {
@@ -294,6 +294,11 @@
   }
 }
 
+.form__action {
+  display: flex;
+  flex-direction: column;
+}
+
 .form__explain {
   margin: 0;
   margin-bottom: 32px;
@@ -305,24 +310,22 @@
 @media (min-width: @tablet-width) {
   .form__wrapper {
     margin: 0;
-    padding: 40px 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
 
     &--color {
       background-color: @bg-color-alternate;
     }
 
     &--last {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
       margin-top: 6px;
-      padding: 0 6.51%;
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 
   .form__fieldset {
     flex-direction: row;
-    padding: 0 6.51%;
   }
 
   .form__legend {
@@ -388,7 +391,7 @@
 
   .form__option-text {
     flex-direction: row;
-    margin: 13px 0 10px;
+    margin: 12px 0 11px;
 
     &:first-of-type {
       margin-top: 8px;
@@ -396,13 +399,13 @@
   }
 
   .form__text {
-    padding: 15px 18px 14px;
+    padding: 12.5px 17px;
 
     font-size: 19px;
 
     &--phone {
       margin-top: 0;
-      margin-bottom: 0;
+      margin-bottom: 2px;
 
       background-color: @bg-color-alternate;
     }
@@ -428,12 +431,24 @@
     }
   }
 
+  .form__option-textarea {
+    margin-top: 9px;
+  }
+
   .form__textarea {
+    padding: 14px;
+
     font-size: 19px;
 
     &::-webkit-input-placeholder {
       font-size: 19px;
     }
+  }
+
+  .form__action {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .form__explain {
@@ -454,17 +469,12 @@
   .form__wrapper {
     &--last {
       width: 100%;
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 0 50px;
+      margin-top: 1px;
     }
   }
 
   .form__fieldset {
     width: 100%;
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 0 50px;
   }
 
   .form__list {
@@ -495,10 +505,10 @@
   }
 
   .form__explain {
-    margin-right: 225px;
+    margin-right: 175px;
   }
 
   .form__button {
-    margin-left: 225px;
+    margin-left: 175px;
   }
 }
