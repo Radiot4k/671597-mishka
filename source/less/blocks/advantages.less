@@ -15,11 +15,6 @@
   font-family: @font;
   color: @color-heading;
 
-  & svg,
-  & path {
-    fill: @color-highlight;
-  }
-
   &--materials svg {
     width: 32px;
     height: 37px;
@@ -65,6 +60,10 @@
     margin-bottom: 20px;
     margin-left: 3px;
   }
+}
+
+.advantages__item-icon {
+  fill: @color-highlight;
 }
 
 @media (min-width: @tablet-width) {
