@@ -11,7 +11,7 @@ function initMap() {
     position: coordinates,
     map: map,
     optimized: false,
-    icon: {url: "../img/icon-map-pin.svg", scaledSize: new google.maps.Size(100, 100)},
+    icon: {url: "./img/icon-map-pin.svg", scaledSize: new google.maps.Size(100, 100)},
     title: "Мишка - милые штуки ручной работы для дома"
   });
 };
