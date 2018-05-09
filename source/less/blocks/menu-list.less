@@ -20,6 +20,7 @@
   font-family: @font;
   color: @color-heading;
   text-decoration: none;
+  transition: opacity 0.3s ease-out;
 
   &:hover:not(&--current),
   &:focus {
@@ -27,6 +28,7 @@
   }
 
   &:active:not(&--current) {
+    transition: none;
     opacity: 0.3;
   }
 }

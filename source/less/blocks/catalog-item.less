@@ -13,6 +13,7 @@
 
   &:active .catalog-item__wrapper {
     box-shadow: 0 3px 5px 0 fade(@color-heading, 10%);
+    transition: none;
   }
 
   &:hover .catalog-item__title {
@@ -21,6 +22,7 @@
 
   &:active .catalog-item__title {
     opacity: 0.3;
+    transition: none;
   }
 }
 
@@ -28,6 +30,7 @@
   padding: 26px 27px;
 
   border: 1px solid @color-border;
+  transition: box-shadow 0.3s ease-out;
 }
 
 .catalog-item__link-title {
@@ -45,6 +48,7 @@
   line-height: 24px;
   font-family: @font;
   color: @color-heading;
+  transition: opacity 0.3s ease-out;
 }
 
 .catalog-item__link-image {
@@ -80,17 +84,18 @@
   &:hover .catalog-item__cart-icon,
   &:focus .catalog-item__cart-icon {
     fill: @color-highlight;
-    opacity: 1;
   }
 
   &:active .catalog-item__cart-icon,
   & .catalog-item__cart-icon:active {
     fill: fade(@color-highlight, 30%);
+    transition: none;
   }
 }
 
 .catalog-item__cart-icon {
-  opacity: 0.2;
+  fill: fade(@color-heading, 20%);
+  transition: fill 0.3s ease-out;
 }
 
 @media (min-width: @tablet-width) {

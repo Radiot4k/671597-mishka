@@ -26,6 +26,7 @@
   text-decoration: none;
 
   border: none;
+  transition: color 0.3s ease-out;
 
   &:hover,
   &:focus {
@@ -34,15 +35,17 @@
 
   &:active {
     color: fade(@color-heading, 30%);
+
+    transition: none;
   }
 
   &:hover .secondary-menu__link-icon {
     fill: @color-highlight;
-    opacity: 1;
   }
 
   &:active .secondary-menu__link-icon {
     fill: fade(@color-highlight, 30%);
+    transition: none;
     cursor: pointer;
   }
 }
@@ -55,11 +58,12 @@
   width: 21px;
   height: 18px;
 
-  fill: #231f20;
-  opacity: 0.2;
+  fill: fade(#231f20, 20%);
+  transition: fill 0.3s ease-out;
 
   &:active {
     fill: fade(@color-highlight, 30%);
+    transition: none;
     cursor: pointer;
   }
 }

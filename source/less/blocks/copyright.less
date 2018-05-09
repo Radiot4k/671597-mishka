@@ -5,28 +5,21 @@
 
   text-decoration: none;
 
-  svg {
-    flex-shrink: 0;
-    width: 27px;
-    height: 34px;
-    margin-top: 6px;
-    margin-right: 3px;
-
-    fill: @color-highlight;
-  }
-
-  &:hover svg,
-  &:focus svg {
+  &:hover .copyright__link-icon,
+  &:focus .copyright__link-icon {
     fill: #46c1ae;
   }
 
   &:active .copyright__text {
     color: fade(@color-heading, 30%);
+
+    transition: none;
   }
 
-  &:active svg,
-  & svg:active {
+  &:active .copyright__link-icon,
+  & .copyright__link-icon:active {
     fill: fade(#46c1ae, 30%);
+    transition: none;
   }
 }
 
@@ -40,11 +33,27 @@
   font-family: @font;
   color: @color-heading;
 
+  transition: color 0.3s ease-out;
+
   &:active {
     color: fade(@color-heading, 30%);
+
+    transition: none;
   }
 
-  &:active ~ svg {
+  &:active ~ .copyright__link-icon {
     fill: fade(#46c1ae, 30%);
+    transition: none;
   }
+}
+
+.copyright__link-icon {
+  flex-shrink: 0;
+  width: 27px;
+  height: 34px;
+  margin-top: 6px;
+  margin-right: 3px;
+
+  fill: @color-highlight;
+  transition: fill 0.3s ease-out;
 }
