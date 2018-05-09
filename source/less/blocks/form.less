@@ -189,6 +189,10 @@
   cursor: pointer;
 }
 
+.form__label br {
+  display: none;
+}
+
 .form__checkbox {
   margin: 0;
   padding: 0;
@@ -312,6 +316,20 @@
 
   font-size: 14px;
   line-height: 16px;
+}
+
+@media (max-width: @mobile-width-only) {
+  .form__wrapper:first-of-type .form__option:first-of-type {
+    transform: translateY(7px);
+
+    & .form__label::before {
+      transform: translateY(-7px);
+    }
+  }
+
+  .form__label br {
+    display: inline;
+  }
 }
 
 @media (min-width: @tablet-width) {
