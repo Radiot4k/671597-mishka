@@ -1,9 +1,4 @@
 {
-  "browserslist": [
-    "last 2 versions",
-    "IE 11",
-    "Firefox ESR"
-  ],
   "name": "mishka",
   "version": "14.0.0",
   "private": true,
@@ -37,6 +32,11 @@
     "build": "grunt build",
     "start": "npm run build && grunt serve"
   },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
   "editorconfig-cli": [
     "*.json",
     "*.js",

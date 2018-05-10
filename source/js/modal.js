@@ -11,11 +11,13 @@ for (var i = 0; i < list.length - 2; i++) {
   });
 };
 
-overlay.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  modal.classList.remove("modal-show");
-  overlay.classList.remove("overlay-show");
-});
+if(overlay) {
+  overlay.addEventListener("click", function(evt) {
+    evt.preventDefault();
+    modal.classList.remove("modal-show");
+    overlay.classList.remove("overlay-show");
+  });
+};
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
