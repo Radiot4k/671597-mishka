@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Мишка - милые штуки ручной работы для дома</title>
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
 
     <!-- Picturefill -->
@@ -16,7 +18,7 @@
   </head>
   <body>
     <div style="display:none">
-      <include src="build/img/sprite.svg"></include>
+      <include src="build/img/index-sprite.svg"></include>
     </div>
     <header class="page-header page-header--index">
       <div class="page-header__logo-wrapper">
@@ -224,7 +226,9 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper container">
         <a class="page-footer__logo">
-          <img class="page-footer__logo-image" src="img/logo-footer.svg" width="86" height="35" alt="Логотип магазина «Мишка»">
+          <svg class="page-footer__logo-icon" width="101.615px" height="34.056px">
+            <use xlink:href="#logo-footer"></use>
+          </svg>
         </a>
         <section class="page-footer__social social">
           <ul class="social__list">
@@ -289,10 +293,7 @@
       </form>
     </section>
     <div class="modal-overlay"></div>
-    <script src="js/menu.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/picturefill.min.js" async></script>
-    <script src="js/map.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-oszyoYdvkVtcEl8PLP-KpbcQdDPcNaU&callback=initMap"></script>
+    <script async src="js/index.min.js"></script>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-oszyoYdvkVtcEl8PLP-KpbcQdDPcNaU&callback=initMap"></script>
   </body>
 </html>
