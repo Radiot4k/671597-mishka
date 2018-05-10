@@ -155,9 +155,7 @@ module.exports = function(grunt) {
     uglify: {
       js: {
         files: {
-          "build/js/index.min.js": ["source/js/*.js"],
-          "build/js/catalog.min.js": ["source/js/menu.js", "source/js/modal.js", "source/js/picturefill.min.js"],
-          "build/js/form.min.js": ["source/js/menu.js", "source/js/picturefill.min.js"]
+          "build/js/script.min.js": ["source/js/*.js"]
         }
       }
     },
