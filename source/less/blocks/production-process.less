@@ -8,6 +8,7 @@
 
   &:active .production-process__wrapper {
     box-shadow: 0 3px 5px 0 fade(@color-heading, 10%);
+    transition: none;
   }
 
   &:hover .production-process__title {
@@ -16,6 +17,7 @@
 
   &:active .production-process__title {
     opacity: 0.3;
+    transition: none;
   }
 }
 
@@ -26,6 +28,7 @@
   background-color: @bg-color;
   border: 1px solid @color-border;
   border-top: none;
+  transition: box-shadow 0.3s ease-out;
 
   &:first-of-type {
     order: -1;
@@ -57,6 +60,8 @@
   line-height: 24px;
   font-family: @font;
   color: @color-heading;
+
+  transition: opacity 0.3s ease-out;
 }
 
 .production-process__video {
@@ -94,6 +99,7 @@
 
   &:active {
     transform: scale(0.8);
+    transition: 0.1s ease-out;
     opacity: 0.3;
   }
 }

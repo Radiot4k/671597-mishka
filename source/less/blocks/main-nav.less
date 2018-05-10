@@ -31,38 +31,20 @@
 
 @media (max-width: @mobile-width-only) {
   .main-nav--closed:not(.main-nav--nojs) .main-nav__wrapper {
-    transform: translateY(-100%);
+    margin-top: -316px;
   }
 
   .main-nav--opened .main-nav__wrapper {
-    position: static;
-
-    transform: translateY(0);
+    margin-top: 0;
   }
 
   .main-nav__wrapper {
-    position: absolute;
+    position: relative;
 
     width: 100%;
 
     background-color: @bg-color;
-    transition: transform 0.4s ease-out;
-  }
-
-  .main-nav--nojs .menu-list__link,
-  .main-nav--nojs .secondary-menu__link {
-    padding-left: 23.44%;
-  }
-
-  .main-nav--nojs .secondary-menu__link svg {
-    left: 9.38%;
-  }
-
-  .main-nav--nojs .main-nav__wrapper {
-    position: static;
-
-    display: block;
-    width: 100%;
+    transition: margin-top 0.4s ease-out;
   }
 
   .main-nav--nojs .main-nav__toggle {
